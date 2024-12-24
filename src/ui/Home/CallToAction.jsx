@@ -22,7 +22,7 @@ export default function CallToAction() {
           helps you stay ahead!
         </p>
         <Button className="mt-6 h-10 w-44 rounded-lg bg-[#e26437] font-semibold text-white transition-all hover:bg-[#FF6F3C]">
-          Get Started
+          Boost Productivity
         </Button>
       </div>
     </div>
