@@ -4,20 +4,40 @@ import { Form } from "react-router-dom";
 import LabelInput from "./LabelInput";
 import { backendApi } from "../../services/backendUrl";
 
-export default function Authentication() {
+export default function AuthPage() {
+  return (
+    <div className="flex h-dvh w-full items-center justify-center px-6">
+      <AuthForm />
+    </div>
+  );
+}
+
+export function AuthForm() {
   const authType = useParams().type;
 
   const formSubmitMessage = useActionData() || { error: "", success: "" };
 
   return (
-    <div className="">
-      <h1 className=" font-montserrat font-bold text-2xl">INVLOGIC</h1>
-      <Form method="POST">
+    <div className="w-full max-w-[500px] bg-white p-4">
+      <div className="mb-4 text-center">
+        <h1 className="mb-1 font-montserrat text-2xl font-bold text-[#2C3E50]">
+          INVLOGIC
+        </h1>
+        <p className="font-montserrat text-sm font-medium text-[#FF6F3C]">
+          Join Us Today
+        </p>
+      </div>
+
+      <Form method="POST" className="flex w-full flex-col justify-center gap-4">
         {formSubmitMessage.error !== "" && (
-          <label>{formSubmitMessage.error}</label>
+          <label className="rounded-sm bg-red-100 text-center text-red-600">
+            {formSubmitMessage.error}
+          </label>
         )}
         {formSubmitMessage.success !== "" && (
-          <label>{formSubmitMessage.success}</label>
+          <label className="rounded-sm bg-green-100 text-center text-green-600">
+            {formSubmitMessage.success}
+          </label>
         )}
         <input type="hidden" name="formType" value={authType} />
 
@@ -34,7 +54,7 @@ export default function Authentication() {
               inputName="lastName"
             />
             <LabelInput
-              labelText="User Name"
+              labelText="Username"
               inputType="text"
               inputName="username"
             />
@@ -64,7 +84,12 @@ export default function Authentication() {
           />
         )}
 
-        <button type="submit">Sign Up</button>
+        <button
+          type="submit"
+          className="mt-2 rounded-sm bg-[#00B8D9] p-1 font-semibold text-white transition-all hover:bg-[#39cce6]"
+        >
+          Sign Up
+        </button>
       </Form>
     </div>
   );
@@ -113,7 +138,7 @@ export async function action({ request }) {
 
       const data = await response.json();
 
-      if (data.statusCode === 201) {
+      if (data.statusCode === 200) {
         message.error = "";
         message.success = data.message;
       } else {
