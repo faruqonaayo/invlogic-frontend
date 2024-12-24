@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AuthPage from "./features/authentication/AuthPage";
 import { action as authAction } from "./features/authentication/AuthPage";
 import AppLayout from "./ui/AppLayout/AppLayout";
-import Home from "./ui/Home";
+import Home from "./ui/Home/Home";
 
 const router = createBrowserRouter([
   {
