@@ -14,27 +14,33 @@ export default function Navigation() {
       </div>
 
       <ul
-        className={`absolute text-sm ${showMobileMenu ? "left-0 top-[64px]" : "left-[-100%] top-0"} flex w-full flex-col gap-4 bg-[#708090] py-4 text-center font-semibold text-white transition-all md:hidden`}
+        className={`absolute text-sm backdrop-blur-md ${showMobileMenu ? "left-0 top-[64px]" : "left-[-100%] top-0"} flex w-full flex-col gap-4 bg-black/30 py-4 text-center font-semibold text-white transition-all md:hidden`}
       >
         <li className="">
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" onClick={() => setShowMobileMenu(false)}>
+            Home
+          </NavLink>
         </li>
         <li className="">
-          <NavLink to="/">Dashboard</NavLink>
+          <NavLink to="/" onClick={() => setShowMobileMenu(false)}>
+            Dashboard
+          </NavLink>
         </li>
         <li className="">
-          <NavLink to="/">About Developer</NavLink>
+          <NavLink to="/" onClick={() => setShowMobileMenu(false)}>
+            About Developer
+          </NavLink>
         </li>
         <li className="">
-          <NavLink to="/auth/login">
-            <button className="w-20 rounded-md border-2 border-[#FF6F3C] bg-white p-1 text-[#FF6F3C]">
+          <NavLink to="/auth/login" onClick={() => setShowMobileMenu(false)}>
+            <button className="w-20 rounded-md border-2 border-[#00B8D9] bg-white p-1 text-[#00B8D9]">
               Login
             </button>
           </NavLink>
         </li>
         <li className="">
-          <NavLink to="/auth/signup">
-            <button className="w-20 rounded-md bg-[#FF6F3C] p-1 text-white">
+          <NavLink to="/auth/signup" onClick={() => setShowMobileMenu(false)}>
+            <button className="w-20 rounded-md bg-[#00B8D9] p-1 text-white">
               Sign Up
             </button>
           </NavLink>
