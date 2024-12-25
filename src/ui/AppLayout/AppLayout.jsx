@@ -10,7 +10,9 @@ export default function AppLayout() {
       <main className="mt-16">
         <Outlet />
       </main>
-      <footer className="h-[500px] w-full bg-[#2C3E50]"></footer>
+      <footer className="w-full bg-[#2C3E50] py-2 text-center text-sm">
+        <span className="text-white">&copy; Copywrite Faruq Ayomide</span>
+      </footer>
     </div>
   );
 }

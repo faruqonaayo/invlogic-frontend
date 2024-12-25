@@ -108,7 +108,7 @@ export function AuthForm() {
             className="cursor-pointer text-sm font-semibold text-[#FF6F3C] transition-all hover:text-[#2C3E50]"
             onClick={() => navigate("/auth/login")}
           >
-            Create a new account?
+            Already have an account?
           </span>
         )}
 
