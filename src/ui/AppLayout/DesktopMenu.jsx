@@ -9,7 +9,7 @@ export default function DesktopMenu() {
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="hover:text-[#00B8D9]">
-        <NavLink to="/">Dashboard</NavLink>
+        <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
       <li className="hover:text-[#00B8D9]">
         <NavLink to="/">About Developer</NavLink>

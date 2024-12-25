@@ -22,7 +22,7 @@ export default function Navigation() {
           </NavLink>
         </li>
         <li className="">
-          <NavLink to="/" onClick={() => setShowMobileMenu(false)}>
+          <NavLink to="/dashboard" onClick={() => setShowMobileMenu(false)}>
             Dashboard
           </NavLink>
         </li>

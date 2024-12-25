@@ -11,7 +11,9 @@ export default function AppLayout() {
         <Outlet />
       </main>
       <footer className="w-full bg-[#2C3E50] py-2 text-center text-sm">
-        <span className="text-white">&copy; Copywrite Faruq Ayomide</span>
+        <span className="tracking-wide text-white">
+          &copy; Copywrite Faruq Ayomide
+        </span>
       </footer>
     </div>
   );
