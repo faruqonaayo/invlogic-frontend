@@ -10,7 +10,7 @@ export default function AppLayout() {
       <main className="mt-16">
         <Outlet />
       </main>
-      <footer></footer>
+      <footer className="h-[500px] w-full bg-[#2C3E50]"></footer>
     </div>
   );
 }

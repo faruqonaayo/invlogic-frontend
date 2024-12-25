@@ -26,7 +26,7 @@ export default function Hero() {
           >
             Get Started
           </button>
-          <button className="h-10 w-44 rounded-full border-2 border-[#00B8D9] p-1 font-semibold tracking-wide text-[#00B8D9] transition-all hover:bg-white">
+          <button className="h-10 w-44 rounded-full border-2 border-[#00B8D9] p-1 font-semibold tracking-wide text-[#00B8D9] transition-all hover:bg-white/30">
             About Developer
           </button>
         </div>

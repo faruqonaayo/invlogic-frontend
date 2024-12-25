@@ -1,4 +1,4 @@
-import { useActionData, useParams } from "react-router-dom";
+import { useActionData, useNavigate, useParams } from "react-router-dom";
 import { Form } from "react-router-dom";
 
 import LabelInput from "./LabelInput";
@@ -6,9 +6,17 @@ import { backendApi } from "../../services/backendUrl";
 
 export default function AuthPage() {
   return (
-    <div className="flex h-dvh w-full items-center justify-center px-6">
-      <AuthForm />
-    </div>
+    <>
+      <div
+        className={`absolute left-0 top-16 -z-20 h-dvh w-full bg-[url('/hero/hero4.jpg')] bg-cover bg-center`}
+      >
+        <div className="h-full w-full bg-black/60 backdrop-blur-sm"></div>
+      </div>
+
+      <div className="flex h-dvh w-full items-center justify-center px-6">
+        <AuthForm />
+      </div>
+    </>
   );
 }
 
@@ -16,6 +24,8 @@ export function AuthForm() {
   const authType = useParams().type;
 
   const formSubmitMessage = useActionData() || { error: "", success: "" };
+
+  const navigate = useNavigate();
 
   return (
     <div className="w-full max-w-[500px] bg-white p-4">
@@ -84,11 +94,29 @@ export function AuthForm() {
           />
         )}
 
+        {authType === "login" && (
+          <span
+            className="cursor-pointer text-sm font-semibold text-[#FF6F3C] transition-all hover:text-[#2C3E50]"
+            onClick={() => navigate("/auth/signup")}
+          >
+            Create a new account?
+          </span>
+        )}
+
+        {authType === "signup" && (
+          <span
+            className="cursor-pointer text-sm font-semibold text-[#FF6F3C] transition-all hover:text-[#2C3E50]"
+            onClick={() => navigate("/auth/login")}
+          >
+            Create a new account?
+          </span>
+        )}
+
         <button
           type="submit"
           className="mt-2 rounded-sm bg-[#00B8D9] p-1 font-semibold text-white transition-all hover:bg-[#39cce6]"
         >
-          Sign Up
+          {authType === "signup" ? "Sign Up" : "Login"}
         </button>
       </Form>
     </div>
