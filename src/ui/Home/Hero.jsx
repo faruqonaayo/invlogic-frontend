@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div id="hero">
       <div
-        className={`absolute left-0 top-16 -z-20 h-[500px] w-full bg-[url('/hero/hero2.jpg')] bg-cover`}
+        className={`absolute left-0 top-16 -z-10 h-[500px] w-full bg-[url('/hero/hero2.jpg')] bg-cover`}
       >
         <div className="h-full w-full bg-black opacity-70"></div>
       </div>

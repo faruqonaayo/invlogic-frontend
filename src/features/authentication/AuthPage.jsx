@@ -1,7 +1,7 @@
 import { useActionData, useNavigate, useParams } from "react-router-dom";
 import { Form } from "react-router-dom";
 
-import LabelInput from "./LabelInput";
+import LabelInput from "../../ui/LabelInput";
 import { backendApi } from "../../services/backendUrl";
 
 export default function AuthPage() {

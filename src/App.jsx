@@ -26,14 +26,18 @@ const router = createBrowserRouter([
         element: <Dashboard />,
         children: [
           {
-            path: "/dashboard/project/new",
-            element: <CreateNewProject />,
+            index: true,
+            element: <MyProjectsPage />,
           },
           {
-            index: true,
             path: "/dashboard/myprojects",
             element: <MyProjectsPage />,
           },
+          {
+            path: "/dashboard/project/new",
+            element: <CreateNewProject />,
+          },
+
           // {
           //   path: "/dashboard/myprojects/favorites",
           //   element: <MyProjectsPage />,

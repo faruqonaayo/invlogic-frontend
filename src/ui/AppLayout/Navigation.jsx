@@ -6,7 +6,7 @@ export default function Navigation() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <nav className="fixed left-0 top-0 flex h-16 w-full items-center justify-between bg-[#2C3E50] px-6">
+    <nav className="fixed left-0 top-0 z-10 flex h-16 w-full items-center justify-between bg-[#2C3E50] px-6">
       <div>
         <label className="mb-1 font-montserrat text-3xl font-bold text-white">
           INVLOGIC

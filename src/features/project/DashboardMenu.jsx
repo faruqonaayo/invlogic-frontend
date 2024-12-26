@@ -8,7 +8,7 @@ export default function DashboardMenu({
 
   return (
     <div
-      className={`absolute ${showDashboardMenu ? "left-0 top-[64px]" : "left-[-100%] top-[500px]"} h-[100dvh] w-full bg-black/60 py-4 backdrop-blur-sm transition-all`}
+      className={`z-0 absolute ${showDashboardMenu ? "left-0 top-[64px]" : "left-[-100%] top-[500px]"} h-[100dvh] w-full bg-black/60 py-4 backdrop-blur-sm transition-all`}
     >
       <ul className="flex h-full w-full flex-col items-center justify-center gap-4 text-[#00B8D9]">
         <li>
